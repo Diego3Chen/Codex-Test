@@ -1,12 +1,16 @@
-// script.js
+// Theme toggle code
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = document.querySelector('.theme-icon');
 
-// Interactive features JavaScript
-
-// Function to display current date and time
-function displayDateTime() {
-    const now = new Date();
-    const dateTimeString = now.toISOString().replace(/T/, ' ').replace(/\..+/, ''); // Format to YYYY-MM-DD HH:MM:SS
-    console.log(`Current Date and Time (UTC): ${dateTimeString}`);
+// Check localStorage for theme preference
+if (localStorage.getItem('resume-theme') === 'dark') {
+    document.body.classList.add('dark');
+    themeIcon.textContent = '🌙';  // Initially set to moon icon
 }
 
-displayDateTime();
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    themeIcon.textContent = isDark ? '🌙' : '☀️'; // Toggle between moon and sun icons
+    localStorage.setItem('resume-theme', isDark ? 'dark' : 'light');
+});
