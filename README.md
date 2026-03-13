@@ -24,9 +24,13 @@ python3 -m http.server 4173
 
 你只要改这些字段，就能快速生成你的个人简历站。
 
-## 3) 公网访问（推荐：Vercel）
+## 3) 我想给别人一个公网链接，怎么做？
 
-> 以下流程无需后端，免费额度足够个人展示。
+下面给你两种最常见方案：
+
+### 方案 A（推荐，长期稳定）：部署到 Vercel
+
+> 适合正式对外分享，链接长期可用。
 
 1. 把当前项目推送到你的 GitHub 仓库。
 2. 登录 <https://vercel.com>，选择 **Add New Project**。
@@ -35,9 +39,27 @@ python3 -m http.server 4173
 5. Build Command 留空，Output Directory 留空（静态站点）。
 6. 点击 Deploy，等待完成后会得到一个 `https://xxx.vercel.app` 的公网地址。
 
-### 绑定自己的域名（可选）
+#### 绑定自己的域名（可选）
 
 在 Vercel 项目的 **Settings → Domains** 中绑定你的域名，即可使用自定义网址。
+
+### 方案 B（临时演示，最快）：本机隧道转发
+
+> 适合临时给面试官演示，电脑关闭后链接通常会失效。
+
+1. 先在本地启动网站：
+
+```bash
+python3 -m http.server 4173
+```
+
+2. 使用 Cloudflare Tunnel（需先安装 cloudflared）：
+
+```bash
+cloudflared tunnel --url http://localhost:4173
+```
+
+3. 终端会输出类似 `https://xxxxx.trycloudflare.com` 的地址，直接发给别人访问。
 
 ## 4) 备选部署：GitHub Pages
 
