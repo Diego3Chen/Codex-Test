@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人简历展示站</title>
+    <meta
+      name="description"
+      content="一个可快速定制的个人简历展示网站模板，适合个人演示与线上投递。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="container nav">
+        <a href="#" class="logo">Resume<span>Demo</span></a>
+        <div class="nav-links">
+          <a href="#about">关于我</a>
+          <a href="#projects">项目</a>
+          <a href="#timeline">经历</a>
+          <a href="#contact">联系</a>
+        </div>
+      </nav>
+
+      <section class="container hero-content">
+        <div>
+          <p class="badge">OPEN TO WORK · 可立即开始</p>
+          <h1 id="name">你的名字</h1>
+          <h2 id="title">前端开发工程师 / 产品型开发者</h2>
+          <p id="summary">
+            这里写 2~3 句话介绍你：擅长方向、代表成果、你正在寻找什么机会。
+          </p>
+          <div class="cta-group">
+            <a id="resumeLink" class="btn primary" href="#" target="_blank" rel="noopener">下载简历</a>
+            <a class="btn ghost" href="#contact">联系我</a>
+          </div>
+          <ul class="stats" id="stats"></ul>
+        </div>
+        <aside class="profile-card">
+          <img id="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="头像" />
+          <h3>核心技能</h3>
+          <ul id="skills"></ul>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="about" class="container section">
+        <h3>关于我</h3>
+        <p id="aboutText"></p>
+      </section>
+
+      <section id="projects" class="container section">
+        <h3>精选项目</h3>
+        <div id="projectGrid" class="project-grid"></div>
+      </section>
+
+      <section id="timeline" class="container section">
+        <h3>工作 & 教育经历</h3>
+        <div id="timelineList" class="timeline"></div>
+      </section>
+
+      <section id="contact" class="container section">
+        <h3>联系方式</h3>
+        <div class="contact-card">
+          <p id="email"></p>
+          <p id="phone"></p>
+          <p id="location"></p>
+          <div class="links" id="socialLinks"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p id="footerText"></p>
+      <button id="copyBtn" class="btn small">复制邮箱</button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
