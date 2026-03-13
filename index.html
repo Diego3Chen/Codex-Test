@@ -3,83 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Chen's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Codex Test</title>
 </head>
 <body>
-    <header>
-        <div class="hero">
-            <button class="theme-toggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">☀️</span>
-            </button>
-            <h1>Welcome to My Portfolio</h1>
-            <p>I'm Diego Chen, a passionate web developer.</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <header class="hero">
+        <div class="container">
+            <div class="theme-toggle">
+                <span class="theme-icon">🌙</span>
+                Toggle Theme
+            </div>
         </div>
     </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>A brief description about yourself goes here. Talk about your background, interests, and what you love about web development.</p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">Project 1</a> - A brief description of project 1.</li>
-            <li><a href="#">Project 2</a> - A brief description of project 2.</li>
-            <li><a href="#">Project 3</a> - A brief description of project 3.</li>
-        </ul>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <p>Detail your professional experience here. Include job titles, companies, and responsibilities.</p>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <p>List your educational background including degrees and certifications.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
+    <main>
+        <section id="section1" class="card">
+            <h2>Section 1</h2>
+            <p>Content for section 1...</p>
+        </section>
+        <section id="section2" class="card">
+            <h2>Section 2</h2>
+            <p>Content for section 2...</p>
+        </section>
+        <!-- Additional sections with existing IDs... -->
+    </main>
     <footer>
-        <p>&copy; 2026 Diego Chen. All rights reserved.</p>
+        <p>&copy; 2026 Codex Test</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
