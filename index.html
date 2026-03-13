@@ -1,36 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <title>Codex Test</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Diego Chen's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <div class="theme-toggle">
-                <span class="theme-icon">🌙</span>
-                Toggle Theme
-            </div>
-        </div>
-    </header>
-    <main>
-        <section id="section1" class="card">
-            <h2>Section 1</h2>
-            <p>Content for section 1...</p>
-        </section>
-        <section id="section2" class="card">
-            <h2>Section 2</h2>
-            <p>Content for section 2...</p>
-        </section>
-        <!-- Additional sections with existing IDs... -->
-    </main>
-    <footer>
-        <p>&copy; 2026 Codex Test</p>
-    </footer>
+  <header class="hero">
+    <div class="hero__inner">
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">☀️</span>
+      </button>
+
+      <div class="hero__content">
+        <h1>Diego Chen</h1>
+        <p class="subtitle">Web Developer · Building clean UI and reliable front-end</p>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="about" class="panel">
+      <h2>About Me</h2>
+      <p>A brief description about yourself goes here. Talk about your background, interests, and what you love about web development.</p>
+    </section>
+
+    <section id="skills" class="panel">
+      <h2>Skills</h2>
+      <ul class="chips">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="panel">
+      <h2>Projects</h2>
+      <ul class="list">
+        <li><a href="#">Project 1</a> <span class="muted">— A brief description of project 1.</span></li>
+        <li><a href="#">Project 2</a> <span class="muted">— A brief description of project 2.</span></li>
+        <li><a href="#">Project 3</a> <span class="muted">— A brief description of project 3.</span></li>
+      </ul>
+    </section>
+
+    <section id="experience" class="panel">
+      <h2>Experience</h2>
+      <p>Detail your professional experience here. Include job titles, companies, and responsibilities.</p>
+    </section>
+
+    <section id="education" class="panel">
+      <h2>Education</h2>
+      <p>List your educational background including degrees and certifications.</p>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact Me</h2>
+      <form class="form" action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Diego Chen. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
